@@ -6,3 +6,8 @@ spring:
     name: front-reactive
 
 
+reactive-core:
+  baseUrl: http://localhost:8090
+  connectTimeout: 10000
+  readTimeout: 10
+  writeTimeout: 10

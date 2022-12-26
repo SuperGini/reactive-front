@@ -34,7 +34,7 @@ public interface ReactiveCoreClient {
 
     @PutExchange("/basketItems/{username}")
     Flux<CustomerResponse> updateCustomerWithBasketItems(@RequestBody Set<BasketItemRequest> basketItemRequests,
-                                                                @PathVariable String username);
+                                                         @PathVariable String username);
 
 
 
