@@ -7,7 +7,6 @@ import com.gini.dto.response.CustomerResponse;
 import com.gini.gateway.ReactiveCoreClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -20,7 +19,6 @@ public class CustomerService {
     private final ReactiveCoreClient reactiveCoreClient;
 
     public Mono<CustomerResponse> saveCustomer(CustomerRequest customerRequest){
-
             return reactiveCoreClient.saveCustomer(customerRequest)
                     .next()
                     .log();
