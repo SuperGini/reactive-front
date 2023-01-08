@@ -12,7 +12,10 @@ public class CorsConfig implements WebFluxConfigurer {
         WebFluxConfigurer.super.addCorsMappings(registry);
         registry.addMapping("/customer/**").allowedOrigins("*");
         registry.addMapping("/customers").allowedOrigins("*");
-        registry.addMapping("/basketItems/**");
+        registry.addMapping("/basketItems/**").allowedOrigins("*").allowedMethods("*");
+
+
+
 
     }
 }

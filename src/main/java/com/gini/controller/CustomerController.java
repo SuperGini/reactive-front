@@ -63,7 +63,7 @@ public class CustomerController {
         return customerService.deleteCustomerByUsername(username);
     }
 
-    @PutMapping(value = "/basketItems/{username}", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    @PutMapping(value = "/basketItems/{username}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Mono<CustomerResponse> updateCustomerWithBasketItems(@RequestBody Set<BasketItemRequest> basketItemRequests,
                                                                 @PathVariable String username) {
 
